@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consulte CEPs em tempo real com histórico salvo localmente.">
+    <title>MasterCEP - Consulta Dinâmica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>📍 MasterCEP</h1>
+        <p>Consulte endereços de forma rápida e otimizada</p>
+    </header>
+
+    <main id="main-container">
+        <section class="card-painel" id="busca-section">
+            <h2>Buscar Endereço</h2>
+            <form id="form-cep" onsubmit="return false;">
+                <label for="input-cep">Digite o CEP:</label>
+                <input 
+                    type="text" 
+                    id="input-cep" 
+                    placeholder="Ex: 20040002" 
+                    maxlength="8" 
+                    aria-label="Digite os 8 números do CEP"
+                    required
+                >
+                <button type="submit" id="btn-buscar">Consultar</button>
+            </form>
+        </section>
+
+        <section class="card-painel" id="resultado-section" aria-live="polite">
+            <h2>Resultado da Consulta</h2>
+            <div id="dados-endereco">
+                <p class="placeholder-text">Insira um CEP acima para pesquisar.</p>
+            </div>
+        </section>
+
+        <section class="card-painel" id="historico-section">
+            <div class="historico-header">
+                <h2>Consultas Recentes</h2>
+                <button id="btn-limpar-historico">Limpar</button>
+            </div>
+            <ul id="lista-historico">
+                </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 MasterCEP Corp. Sistema Otimizado.</p>
+        <img 
+            src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=500" 
+            alt="Logotipo decorativo de fundo" 
+            loading="lazy" 
+            class="img-otimizada"
+        >
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
